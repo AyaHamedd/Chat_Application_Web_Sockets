@@ -15,12 +15,14 @@ const io = require("socket.io")(server, {
   },
 });
 
+/**** Broadcast messages ****/
 io.on("connection", (socket) => {
-  console.log("new connection", socket.id);
-  socket.on("message", (data) => {
-    socket.broadcast.emit("message", data);
+  socket.on("broadcastMessage", (data) => {
+    socket.broadcast.emit("broadcastMessage", data);
   });
 });
+
+
 
 server.listen(3001, () => {
   console.log("Sever listening on port 3001");
