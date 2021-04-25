@@ -13,7 +13,6 @@ const Room = (props) => {
 
   const handleJoinRoom = (e) => {
     e.preventDefault();
-    console.log("joining room ",room)
     socket.emit("joinRoom",room);
     setJoinedRoom(room);
     setRoom("");

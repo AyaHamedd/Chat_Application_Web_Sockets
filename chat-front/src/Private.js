@@ -13,7 +13,6 @@ const Private = (props) => {
 
   const selectUser = (e) => {
     e.preventDefault();
-    console.log(e.target.value);
     setSelectedUser(e.target.value);
   };
 
@@ -23,7 +22,6 @@ const Private = (props) => {
       setUsers(users);
     });
     socket.on("sendPrivate", (data) => {
-      console.log(data,"yeeeess");
       addResponseMessage(data);
     });
   }, []);
