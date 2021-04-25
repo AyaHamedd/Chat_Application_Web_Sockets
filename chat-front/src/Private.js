@@ -1,18 +1,51 @@
-import { React, useEffect } from "react";
-import { addResponseMessage, Widget } from 'react-chat-widget';
-import 'react-chat-widget/lib/styles.css';
+import { React, useEffect, useState } from "react";
+import { addResponseMessage, Widget } from "react-chat-widget";
+import "react-chat-widget/lib/styles.css";
 import socket from "./socketconfig";
- 
+
 const Private = (props) => {
-  const handleNewUserMessage = (newMessage) => {
-    socket.emit('broadcastMessage',newMessage);
+  const [users, setUsers] = useState([]);
+  const [selectedUser, setSelectedUser] = useState("");
+
+  const handleUserMessage = (message) => {
+    socket.emit("sendPrivate", selectedUser, message);
   };
+
+  const selectUser = (e) => {
+    e.preventDefault();
+    console.log(e.target.value);
+    setSelectedUser(e.target.value);
+  };
+
   useEffect(() => {
-    socket.on("broadcastMessage", (data) => {
+    socket.emit("getUsers");
+    socket.on("getUsers", (users) => {
+      setUsers(users);
+    });
+    socket.on("sendPrivate", (data) => {
+      console.log(data,"yeeeess");
       addResponseMessage(data);
     });
-  },[]);
-    return (<div><Widget handleNewUserMessage={handleNewUserMessage}/></div>)
-}
+  }, []);
+  return (
+    <div>
+      <form>
+        <label>User :</label>
+        <br />
+        <select
+          onChange={selectUser}
+          className="form-control"
+          id="exampleFormControlSelect1"
+        >
+          <option disabled selected hidden>Choose a User</option>
+          {users.map((user, index) => {
+            return <option key={user}>{user}</option>;
+          })}
+        </select>{" "}
+      </form>
+      <Widget handleNewUserMessage={handleUserMessage} />
+    </div>
+  );
+};
 
 export default Private;

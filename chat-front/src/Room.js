@@ -33,7 +33,7 @@ const Room = (props) => {
           <input type="text" name="name" onChange={(e) => setRoom(e.target.value)}  value={room} required/>
         </label>
         <br />
-        <input class="btn btn-success" type="submit" value="Submit" onClick={handleJoinRoom}/>
+        <input className="btn btn-success" type="submit" value="Submit" onClick={handleJoinRoom}/>
       </form>
       <Widget handleNewUserMessage={handleRoomMessage} />
     </div>

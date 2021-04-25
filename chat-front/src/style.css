@@ -27,4 +27,9 @@ form{
     top:60%;
     left:38%;
     font-family: 'Poppins', sans-serif;
+    width:20rem;
+}
+
+form select{
+    width:40px;
 }
