@@ -24,19 +24,19 @@ Implemented using:
 ![alt text](https://github.com/AyaHamedd/Push_Pull_Technologies_Web_Sockets/blob/main/demo/private.gif?raw=true)
 
 ## Installation
-Clone the repo 
+Clone the repo <br/>
 ```https://github.com/AyaHamedd/Chat_Application_Web_Sockets.git```
 
-Install dependencies
+Install dependencies <br/>
 ```cd Chat_Application_Web_Sockets/chat-front```<br/>
 ```npm insall```<br/>
 ```cd Chat_Application_Web_Sockets/chat-end```<br/>
 ```npm insall```<br/>
 
-Run The Server
+Run The Server <br/>
 ```cd Chat_Application_Web_Sockets/chat-end```<br/>
 ```nodemon index.js```<br/>
 
-Run The Client
+Run The Client <br/>
 ```cd Chat_Application_Web_Sockets/chat-front```<br/>
 ```npm start```<br/>
