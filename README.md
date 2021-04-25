@@ -1,6 +1,7 @@
 # Push_Pull_Technologies_Web_Sockets
 
 An implementation of a simple real-time chat application, aiming to gain hands-on experience with web sockets.
+<br/>
 Implemented using:
 - Express.js for backend.
 - React.js for frontend.
@@ -27,15 +28,15 @@ Clone the repo
 ```https://github.com/AyaHamedd/Chat_Application_Web_Sockets.git```
 
 Install dependencies
-```cd Chat_Application_Web_Sockets/chat-front```
-```npm insall```
-```cd Chat_Application_Web_Sockets/chat-end```
-```npm insall```
+```cd Chat_Application_Web_Sockets/chat-front```<br/>
+```npm insall```<br/>
+```cd Chat_Application_Web_Sockets/chat-end```<br/>
+```npm insall```<br/>
 
 Run The Server
-```cd Chat_Application_Web_Sockets/chat-end```
-```nodemon index.js```
+```cd Chat_Application_Web_Sockets/chat-end```<br/>
+```nodemon index.js```<br/>
 
 Run The Client
-```cd Chat_Application_Web_Sockets/chat-front```
-```npm start```
+```cd Chat_Application_Web_Sockets/chat-front```<br/>
+```npm start```<br/>
