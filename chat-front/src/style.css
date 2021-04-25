@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 body{
     background-image: url('./bg.png');
-    background-size:cover;
+    background-position: center center;
     font-family: 'Poppins', sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 a {
@@ -19,17 +22,16 @@ a:hover {
     font-family: 'Poppins', sans-serif;
 }
 
-form{
+#chat-form{
     font-size:1.0rem;
     color:rgb(209, 79, 187);
-    position: absolute;
     text-align:center;
-    top:60%;
-    left:38%;
+    margin:auto;
+    margin-top:17rem;
     font-family: 'Poppins', sans-serif;
     width:20rem;
 }
 
-form select{
-    width:40px;
+#chat-form select{
+    width:20rem;
 }

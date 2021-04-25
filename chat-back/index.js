@@ -18,8 +18,8 @@ const io = require("socket.io")(server, {
 const users = [];
 /**** Broadcast messages ****/
 io.on("connection", (socket) => {
+  console.log("new connection ",socket.id);
   users.push(socket.id);
-
   const sender = users.indexOf(socket.id);
 
   socket.on("broadcastMessage", (data) => {

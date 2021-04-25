@@ -14,6 +14,7 @@ const Private = (props) => {
   const selectUser = (e) => {
     e.preventDefault();
     setSelectedUser(e.target.value);
+    console.log(e.target.value);
   };
 
   useEffect(() => {
@@ -27,10 +28,11 @@ const Private = (props) => {
   }, []);
   return (
     <div>
-      <form>
+      <form autoComplete="off" id="chat-form">
         <label>User :</label>
         <br />
         <select
+          onFocus={selectUser}
           onChange={selectUser}
           className="form-control"
           id="exampleFormControlSelect1"
