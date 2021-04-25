@@ -6,7 +6,7 @@ import io from "socket.io-client";
 import BroadCast from "./Broadcast";
 import Private from "./Private";
 import Room from "./Room";
-
+import "./style.css";
 const BASE_URL = "http://localhost:3001";
 const socket = io(BASE_URL);
  
